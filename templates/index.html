@@ -13,7 +13,7 @@
     <div id="wrapper">
       <div id="menu">
         <p class="welcome">A.I Chatbot<b></b></p>
-        <p class="logout"><a id="exit" href="">Exit Chat</a></p>
+        <p class="logout"><a id="exit" href="">New Chat</a></p>
       </div>
       <div id="chatbox">
         <ul id="messages"></ul>
@@ -36,7 +36,7 @@
         li.appendChild(document.createTextNode(msg));
         document.getElementById("messages").appendChild(li);
         li.setAttribute("align", "right");
-        li.style.color = "blue";
+        li.style.color = "#1e6091";
         const data = { message: msg };
         const jsonData = JSON.stringify(data);
         fetch("http://localhost:5000/predict", {
@@ -48,7 +48,7 @@
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(txt));
             document.getElementById("messages").appendChild(li);
-            li.style.color = "green";
+            li.style.color = "#38b000";
           })
           .catch((err) => console.log(err));
       }

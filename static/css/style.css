@@ -40,7 +40,7 @@ a:hover {
 #loginform {
   margin: 0 auto;
   padding-bottom: 25px;
-  background: #eee;
+  background: #edf6f9;
   width: 600px;
   max-width: 100%;
   border: 2px solid #212121;
@@ -75,20 +75,20 @@ a:hover {
 #usermsg {
   flex: 1;
   border-radius: 4px;
-  border: 1px solid #ff9800;
+  border: 1px solid #38a3a5;
   padding: 0 10px;
 }
 
 #name {
   border-radius: 4px;
-  border: 1px solid #ff9800;
+  border: 1px solid #38a3a5;
   padding: 2px 8px;
 }
 
 #submitmsg,
 #enter {
-  background: #ff9800;
-  border: 2px solid #e65100;
+  background: #38a3a5;
+  border: 2px solid #38a3a5;
   color: white;
   padding: 4px 10px;
   font-weight: bold;
@@ -110,7 +110,7 @@ a:hover {
 
 a#exit {
   color: white;
-  background: #c62828;
+  background: #e63946;
   padding: 4px 8px;
   border-radius: 4px;
   font-weight: bold;
@@ -125,7 +125,7 @@ a#exit {
 }
 
 .msgln span.chat-time {
-  color: #666;
+  color: #e5e5e5;
   font-size: 60%;
   vertical-align: super;
 }
@@ -133,7 +133,7 @@ a#exit {
 .msgln b.user-name,
 .msgln b.user-name-left {
   font-weight: bold;
-  background: #546e7a;
+  background: #e5e5e5;
   color: white;
   padding: 2px 4px;
   font-size: 90%;
