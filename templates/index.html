@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="menu">
+        <p class="welcome">A.I Chatbot<b></b></p>
+        <p class="logout"><a id="exit" href="">Exit Chat</a></p>
+      </div>
+      <div id="chatbox">
+        <ul id="messages"></ul>
+      </div>
+      <form name="message" action="">
+        <input name="usermsg" type="text" id="usermsg" />
+        <input
+          name="submitmsg"
+          type="button"
+          id="submitmsg"
+          value="Send"
+          onclick="createMsg()"
+        />
+      </form>
+    </div>
+    <script type="text/javascript">
+      function createMsg() {
+        const msg = document.querySelector("#usermsg").value;
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        document.getElementById("messages").appendChild(li);
+        li.setAttribute("align", "right");
+        li.style.color = "blue";
+        const data = { message: msg };
+        const jsonData = JSON.stringify(data);
+        fetch("http://localhost:5000/predict", {
+          method: "post",
+          body: jsonData,
+        })
+          .then((res) => res.text())
+          .then((txt) => {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(txt));
+            document.getElementById("messages").appendChild(li);
+            li.style.color = "green";
+          })
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>
