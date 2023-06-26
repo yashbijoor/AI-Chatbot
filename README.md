@@ -3,6 +3,9 @@
 
 A chatbot that uses the OpenAI api to fetch results.
 
+## Screenshot
+
+<img width="462" alt="image" src="https://github.com/yashbijoor/AI-Chatbot/assets/80248111/546a2f53-8cea-446e-91f5-f2506b225062">
 
 ## Run Locally
 
@@ -27,7 +30,3 @@ Run server
 ```bash
   flask run
 ```
-
-## Screenshot
-
-<img width="462" alt="image" src="https://github.com/yashbijoor/AI-Chatbot/assets/80248111/546a2f53-8cea-446e-91f5-f2506b225062">
